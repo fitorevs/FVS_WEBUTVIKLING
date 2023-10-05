@@ -1,0 +1,10 @@
+@charset "UTF-8";
+body {
+  /* Innleder en blokk med styling for <body> */
+}
+body h1 {
+  /* Setter tekstfargen til rosa for alle <h1>-elementer som er inne i <body> */
+  color: pink;
+}
+
+/* Slutt på styling for <body> *//*# sourceMappingURL=main.css.map */
