@@ -11,15 +11,18 @@
     <title>Bolleoppskrifter</title>
 </head>
 <body>
+    <div id="grid-container">
     <header>
         <nav>
             <a href="#" id="logo">Logo</a>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-bars"></i>
-            <ul>
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i id="ham" class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="navbar">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#services">Services</a></li>
             </ul>
         </nav>
         <section>
@@ -28,17 +31,24 @@
         </section>
     </header>
     <main>
-        <section>
-            <img src="#" alt="">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <!--Seksjon 1-->
+        <section class="flex-section">
+            <img src="https://placehold.co/600x400" alt="Grå placeholder bilde">
+            <section>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </section>   
+        </section>
+        <!--Seksjon 2-->
+        <section class="flex-section right">
+            <img src="https://placehold.co/600x400" alt="Grå placeholder bilde">
+            <section>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </section>
         </section>   
-        <section>
-            <img src="#" alt="">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        </section>   
-        <section>
+        <!--Seksjon 3-->
+        <section id="services">
             <h2>Services</h2>
             <article>
                 <h3>Lorem Ipsum</h3>
@@ -57,5 +67,17 @@
     <footer>
 
     </footer>
+    </div>
+    <script>
+        let x = document.querySelector(".navbar")
+
+        document.getElementById("ham").addEventListener("click", (e) =>{
+            if (x.className === "navbar") {
+                x.className += " responive"; 
+            } else {
+                x.className = "navbar"
+            }
+        })
+    </script>
 </body>
 </html>
