@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://static.xx.fbcdn.net/rsrc.php/yk/r/TYhiZ_A7dmu.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Fjasebook</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="#">fjasebook</a></h1>
+            <h2>Fjasebook hjelper deg med å holde kontakten og dele opplevelser med menneskene i livet ditt.</h2>
+        </header>
+        <section>
+            <article>
+                <form method="post" action="#">
+                    <label>E-postadresse</label>
+                    <input type="email" name="email" placeholder="nora@epost.no" id="email" required>
+                    <label for="password">Passord</label>
+                    <input type="password" name="password" placeholder="*******" id="password" required>
+                    <input type="submit" value="Logg inn">
+                    <a href="#">Glemt Passord?</a>
+                </form>
+                <button onclick="openClose(`flex`)">Opprett ny konto</button>
+            </article>
+            <p><strong>Opprett en side</strong> for en kjendis, et merke eller en bedrift.</p>
+        </section>
+    </main>
+    <section id="user-registration">
+        <form id="user-reg" method="epost" action="#" autocomplete="on">
+            <span onclick="openClose(`none`)">X</span>
+            <h3>Registrer bruker</h3>
+            <h4>Det er raskt og lett</h4>
+            <label for="name">
+                Fornavn
+                <input type="text" name="name" placeholder="Nora">
+            </label>
+            <label for="lname">
+                Etternavn
+                <input type="text" name="lname" placeholder="Nordmann">
+            </label>
+            <label for="user-reg-email">E-postadresse</label>
+            <input type="email" name="user-reg-email" id="user-reg-email" placeholder="nora@epost.no">
+            <label for="user-reg-pass">Passord</label>
+            <input type="password" name="user-reg-pass" id="user-reg-pass" placeholder="******">
+            <label class="select-option-text">Fødselsdato</label>
+            <select name="daylist" id="day" form="user-reg">
+            </select>
+            <select name="month-list" id="month" form="user-reg">
+                <option value="jan">jan</option>
+                <option value="feb">feb</option>
+                <option value="mars">mars</option>
+                <option value="april">april</option>
+                <option value="mai">mai</option>
+                <option value="juni">juni</option>
+                <option value="juli">juli</option>
+                <option value="aug">aug</option>
+                <option value="sep">sep</option>
+                <option value="okt">okt</option>
+                <option value="nov">nov</option>
+                <option value="des">des</option>
+            </select>
+           <select name="yearlist" id="year">
+           </select>
+          <label class="select-option-text">Kjønn</label>
+          <label class="radio-label">
+            Kvinne
+            <input type="radio" value="kvinne" id="kvinne" name="gender">
+          </label>
+          <label class="radio-label">
+            Mann
+            <input type="radio" value="mann" id="mann" name="gender">
+          </label>
+          <label class="radio-label">
+            Egendefinert
+            <input type="radio" value="egen" id="egen" name="gender">
+          </label>
+          <p>text. <a href="#">Finn ut mer</a>
+          </p>
+          <input type="submit" value="Registrer">
+        </form>
+    </section>
+
+    <script>
+
+        let daylist = document.getElementById("day")
+        let yearlist = document.getElementById("year")
+        let thisYear = new Date().getFullYear()
+
+        for(let i = 1; i <= 31; i++) {
+            let option = new Option (i, i)
+            daylist.appendChild(option)
+        }
+
+        for(let i = thisYear; i >= thisYear - 100; i--) {
+            let option = new Option (i, i)
+            yearlist.appendChild(option)
+
+        }
+        const openClose = (value)=>{
+            document.getElementById("user-registration").style.display = value
+        }
+
+    </script>
+</body>
+</html>
